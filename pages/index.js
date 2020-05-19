@@ -106,7 +106,7 @@ function Index(props) {
   // get acccount info ----------
   useEffect(() => {
     async function fetchAccountInfo(){
-      let route = 'http://dev-metaspf401.sunpowercorp.com:4848/getaccountinfo'
+      let route = 'http://dev-metaspf401.sunpowercorp.com:4850/getaccountinfo'
       
       let response = await fetch(`${route}/${employee_number}`)
 
@@ -121,7 +121,7 @@ function Index(props) {
   // get acccount info again----------
   useEffect(() => {
     async function fetchAccountInfo(){
-      let route = 'http://dev-metaspf401.sunpowercorp.com:4848/getaccountinfo'
+      let route = 'http://dev-metaspf401.sunpowercorp.com:4850/getaccountinfo'
       
       let response = await fetch(`${route}/${employee_number}`)
 
@@ -137,7 +137,7 @@ function Index(props) {
   // get user info ----------
   useEffect(() => {
     async function fetchAccountInfo(){
-      let route = 'http://dev-metaspf401.sunpowercorp.com:4848/getuserprofile'
+      let route = 'http://dev-metaspf401.sunpowercorp.com:4850/getuserprofile'
       
       let response = await fetch(`${route}`, {
         method: 'POST',
@@ -159,7 +159,7 @@ function Index(props) {
     const timer = setTimeout(() => {
       setResponseMessage('');
       setEmployee_number('');
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(timer);
   })
 
@@ -167,7 +167,7 @@ function Index(props) {
     setOpenNext(false);
     setOpenBackrop(!openBackdrop)
 
-    let route = 'http://dev-metaspf401.sunpowercorp.com:4848/loadaccount'
+    let route = 'http://dev-metaspf401.sunpowercorp.com:4850/loadaccount'
 
     let response = await fetch(`${route}`, {
       method: 'POST',
