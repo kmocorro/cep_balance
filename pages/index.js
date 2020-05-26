@@ -311,7 +311,7 @@ function Index(props) {
         :<></>
       }
       </ResultLayout>
-      <Container maxWidth="md">
+      <Container maxWidth="md" style={{paddingTop: 4, paddingBottom: 4}}>
         <Grid container className={classes.logs}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             {
@@ -319,10 +319,43 @@ function Index(props) {
                 <MaterialTable
                   icons={tableIcons}
                   columns={[
-                    { title: 'Transaction Date', field: 'transaction_date', defaultSort: 'desc' },
-                    { title: 'Cashier', field: 'cashier' },
-                    { title: 'Transaction', field: 'transaction_type' },
-                    { title: 'Amount', field: 'amount', type: 'numeric' }
+                    { title: 'Transaction Date', field: 'transaction_date', defaultSort: 'desc',
+                      cellStyle: {
+                        fontSize: 14
+                      },
+                      headerStyle: {
+                        fontSize: 14,
+                        fontWeight: '700'
+                      }
+                    },
+                    { title: 'Cashier', field: 'cashier',
+                      cellStyle: {
+                        fontSize: 14
+                      },
+                      headerStyle: {
+                        fontSize: 14,
+                        fontWeight: '700'
+                      }
+                    },
+                    { title: 'Transaction', field: 'transaction_type',
+                      cellStyle: {
+                        fontSize: 14
+                      },
+                      headerStyle: {
+                        fontSize: 14,
+                        fontWeight: '700'
+                      }
+                    },
+                    { title: 'Amount', field: 'amount', type: 'numeric',
+                      cellStyle: {
+                        fontSize: 14,
+                        fontWeight: '700'
+                      },
+                      headerStyle: {
+                        fontSize: 14,
+                        fontWeight: '700'
+                      }
+                    }
                   ]}
                   data={userTransactionLogs}
                   title={`${userData.name} - CEP Transaction logs ${new Date()}`}

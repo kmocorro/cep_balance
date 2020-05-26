@@ -19,9 +19,8 @@ export default function Scan(props) {
   return (
     <div className={classes.scan}>
       <Typography variant="h6">Check Load Balance here</Typography>
-      <Typography variant="body2" color="textSecondary" gutterBottom>Scan or Enter employee number below to check employee's account</Typography>
       <Paper elevation={0} >
-        <CardContent>
+        <CardContent style={{paddingTop: 4, paddingBottom: 4}}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <TextField 

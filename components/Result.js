@@ -48,7 +48,7 @@ export default function Result(props) {
 
   return (
     <Paper elevation={0}  className={classes.result}>
-      <CardContent>
+      <CardContent style={{paddingTop: 4, paddingBottom: 4}}>
         <Grid container>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Typography color="textPrimary" align="center" variant="h2" gutterBottom>{props.userData.name}</Typography>
