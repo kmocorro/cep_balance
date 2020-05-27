@@ -56,11 +56,11 @@ export default function Result(props) {
             <Typography color="textSecondary" align="left">Balance</Typography>
             <Typography className={classes.accountValues} align="left" variant="h4" gutterBottom>₱{props.userData.available_balance}</Typography>
           </Grid>
-          <Grid item xs={6} sm={6} md={6} lg={6}>
+          <Grid item xs={6} sm={6} md={5} lg={5}>
             <Typography color="textSecondary" align="left">Account Name</Typography>
             <Typography className={classes.accountValues} align="left" variant="h5" gutterBottom>{props.userData.name}</Typography>
           </Grid>
-          <Grid item xs={6} sm={6} md={2} lg={2}>
+          <Grid item xs={6} sm={6} md={3} lg={3}>
             <Typography color="textSecondary" align="left">Employee No.</Typography>
             <Typography className={classes.accountValues} align="left" variant="h5" gutterBottom>{props.userData.id}</Typography>
           </Grid>
