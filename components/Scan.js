@@ -18,12 +18,13 @@ export default function Scan(props) {
 
   return (
     <div className={classes.scan}>
-      <Typography variant="h6">Check Load Balance here</Typography>
-      <Paper elevation={0} >
+      <Typography variant="h6">Check Balance here</Typography>
+      <Paper elevation={0}>
         <CardContent style={{paddingTop: 4, paddingBottom: 4}}>
           <Grid container>
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <TextField 
+                autoFocus={true}
                 value={props.employee_number} 
                 onChange={props.handleEmployeeNumberOnChange}
                 label="Barcode / Employee number" 
@@ -31,7 +32,6 @@ export default function Scan(props) {
                 variant="outlined" 
                 placeholder="Employee Number" 
                 onClick={props.handleEmployeeNumberOnClick}
-                autoFocus 
                 margin="dense"
               />
             </Grid>
