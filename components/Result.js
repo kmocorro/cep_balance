@@ -21,7 +21,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const useStyles = makeStyles((theme) => ({
   result: {
-    marginTop: 0
+    marginTop: 0,
+    paddingTop: 10
   },
   button: {
     marginTop: 10,
@@ -48,7 +49,7 @@ export default function Result(props) {
   const classes = useStyles()
 
   return (
-    <Paper elevation={0}  className={classes.result}>
+    <Paper elevation={1}  className={classes.result}>
       <CardContent style={{paddingTop: 2, paddingBottom: 2}}>
         <Grid container>
           <Grid item xs={12} sm={12} md={4} lg={4}>
