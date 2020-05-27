@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Roboto Condensed'
   },
   accountValues: {
-    fontFamily: 'Roboto Condensed'
+    fontFamily: 'Roboto Condensed',
+    fontWeight: '600'
   },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
@@ -54,13 +55,13 @@ export default function Result(props) {
             <Typography color="textSecondary" align="left">Balance</Typography>
             <Typography className={classes.accountValues} align="left" variant="h4" gutterBottom>₱{props.userData.available_balance}</Typography>
           </Grid>
-          <Grid item xs={6} sm={6} md={4} lg={4}>
+          <Grid item xs={6} sm={6} md={6} lg={6}>
             <Typography color="textSecondary" align="left">Account Name</Typography>
-            <Typography className={classes.accountValues} align="left" variant="h4" gutterBottom>{props.userData.name}</Typography>
+            <Typography className={classes.accountValues} align="left" variant="h5" gutterBottom>{props.userData.name}</Typography>
           </Grid>
-          <Grid item xs={6} sm={6} md={4} lg={4}>
-            <Typography color="textSecondary" align="left">Employee Number</Typography>
-            <Typography className={classes.accountValues} align="left" variant="h4" gutterBottom>{props.userData.id}</Typography>
+          <Grid item xs={6} sm={6} md={2} lg={2}>
+            <Typography color="textSecondary" align="left">Employee No.</Typography>
+            <Typography className={classes.accountValues} align="left" variant="h5" gutterBottom>{props.userData.id}</Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <Collapse in={props.openAlert}>
