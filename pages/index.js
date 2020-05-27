@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20
   },
   logs: {
-    marginTop: 20,
+    marginTop: 5,
     marginBottom: 50
   }
 }));
@@ -311,7 +311,7 @@ function Index(props) {
         :<></>
       }
       </ResultLayout>
-      <Container maxWidth="md" style={{paddingTop: 4, paddingBottom: 4}}>
+      <Container maxWidth="sm" style={{paddingTop: 2, paddingBottom: 2}}>
         <Grid container className={classes.logs}>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             {
@@ -319,49 +319,52 @@ function Index(props) {
                 <MaterialTable
                   icons={tableIcons}
                   columns={[
-                    { title: 'Transaction Date', field: 'transaction_date', defaultSort: 'desc',
+                    { title: 'Date', field: 'transaction_date', defaultSort: 'desc',
                       cellStyle: {
-                        fontSize: 14
+                        fontSize: 12
                       },
                       headerStyle: {
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: '700'
                       }
                     },
                     { title: 'Cashier', field: 'cashier',
                       cellStyle: {
-                        fontSize: 14
+                        fontSize: 12
                       },
                       headerStyle: {
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: '700'
                       }
                     },
                     { title: 'Transaction', field: 'transaction_type',
                       cellStyle: {
-                        fontSize: 14
+                        fontSize: 12
                       },
                       headerStyle: {
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: '700'
                       }
                     },
                     { title: 'Amount', field: 'amount', type: 'numeric',
                       cellStyle: {
-                        fontSize: 14,
+                        fontSize: 20,
                         fontWeight: '700'
                       },
                       headerStyle: {
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: '700'
                       }
                     }
                   ]}
                   data={userTransactionLogs}
-                  title={`${userData.name} - CEP Transaction logs ${new Date()}`}
                   options={{
-                    exportButton: true,
-                    exportAllData: true,
+                    exportButton: false,
+                    exportAllData: false,
+                    search: false,
+                    toolbar: false,
+                    paging: true,
+                    
                   }}
                 />
               :
